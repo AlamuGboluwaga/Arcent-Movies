@@ -2,7 +2,7 @@
 
 # dependencies
 node_modules/
-app/(tabs)
+
 app/movies
 # Expo
 .expo/
