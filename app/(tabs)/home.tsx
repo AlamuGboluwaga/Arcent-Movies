@@ -1,12 +1,13 @@
-import { View, Text } from 'react-native'
+import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-const Search = () => {
+const Home = () => {
   return (
     <View className='h-full w-full flex justify-center items-center'>
-      <Text>Search</Text>
+      <Text> Home </Text>
     </View>
   )
 }
 
-export default Search
+export default Home
+

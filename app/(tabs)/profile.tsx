@@ -1,14 +1,12 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { View, Text } from 'react-native'
 import React from 'react'
 
 const Profile = () => {
   return (
-    <View>
-      <Text>Users Profile</Text>
+    <View className='h-full w-full flex justify-center items-center'>
+      <Text>Profile</Text>
     </View>
   )
 }
 
 export default Profile
-
-const styles = StyleSheet.create({})
