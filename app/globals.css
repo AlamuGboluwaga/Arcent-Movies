@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.container{
+@apply h-full w-full flex justify-center items-center
+}
+.button{
+@apply w-[327px] h-[58px] rounded-xl bg-[#FF8C00] flex justify-center items-center
+}

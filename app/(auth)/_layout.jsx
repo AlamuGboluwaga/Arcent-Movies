@@ -1,27 +1,29 @@
 import React from 'react'
-import { View, Text } from 'react-native'
-import { Tabs } from "expo-router";
+import { Stack, Tabs } from "expo-router";
+import { StatusBar } from "expo-status-bar";
+import signIn from './signIn';
+
 
 const Layout = () => {
   return (
-   <Tabs 
-   screenOptions={{
-    
-   }}
- 
-   >
-    <Tabs.Screen
-    name='onboarding'
+   <Stack>
+    <Stack.Screen
+    name='signIn'
     options={{
-      title: "Onboarding",
-      headerShown: false,
-  
-     
+      headerShown:false,
+      title:'Sign In'
     }}
-  
     />
-   </Tabs>
-  )
+     <Stack.Screen
+    name='signUp'
+    options={{
+      headerShown:false,
+      title:'Sign Up'
+    }}
+    />
+    <StatusBar backgroundColor='black' style='dark' />
+   </Stack>
+  ) 
 }
 
 export default Layout

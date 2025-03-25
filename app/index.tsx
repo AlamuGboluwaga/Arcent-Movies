@@ -4,21 +4,23 @@ import {
   Text,
   Image,
   View,
-  StatusBar,
 } from "react-native";
-import React from "react";
+import {StatusBar} from  'expo-status-bar'
+import React, { useState } from "react";
 import { LinearGradient } from "expo-linear-gradient";
-import { Link } from "expo-router";
+import {router } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Logo, Onboarding } from "./constants";
 import Button from "./componenets/button";
-import { styled } from "nativewind";
-const GradientBackground = styled(LinearGradient);
+// import { styled } from "nativewind";
+// const GradientBackground = styled(LinearGradient);
 const App = () => {
+  const [isLoading, setLoading] = useState(false);
+
   return (
-    <SafeAreaView className="bg-primary ">
+    <SafeAreaView className="bg-primary   dark:bg-black">
       <ScrollView className=" h-[100%]">
-        <View className="flex  h-full w-full mt-14 justify-center  items-center  gap-4 ">
+        <View className=" container  gap-6 mt-10  ">
           <View className="w-[115px] h-[34.07px]">
             <Image source={Logo} className="h-full w-full " />
           </View>
@@ -45,13 +47,14 @@ const App = () => {
             </Text>
           </View>
           <Button
-          className="w-[327px] h-[58px] rounded-xl bg-gradient-to-r from-[#FF8C00] to-[#FFA300] flex justify-center items-center"
-            title="Continue with Email"
-            TextClassName="h-[] w-600 text-center items-center font-bold "
+            onPress={() =>router.push('/signIn')}
+            opacity="0.7"
+            children="Continue with Email"
+            className="button"
+            textClassName="w-600 text-center items-center font-bold"
+            disabled={isLoading}
           />
-          <StatusBar
-          
-          />
+          <StatusBar  backgroundColor="black" style="light" />
         </View>
       </ScrollView>
     </SafeAreaView>
